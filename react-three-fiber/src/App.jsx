@@ -5,6 +5,7 @@ import {Canvas, useFrame} from "@react-three/fiber"
 import Sphere from './Sphere'
 import Torus from './Torus'
 import TorusKnot from './TorusKnot'
+import { OrbitControls } from '@react-three/drei'
 
 const Cube = ({position, size, color}) =>{
   const ref = useRef();
@@ -47,11 +48,14 @@ function App() {
 
         {/* work on sphere */}
         {/* <Sphere position={[0, 0, 0]} size={[1, 30, 30]} color={'hotpink'}/> */}
-        {/* <Torus position={[-4, 0, 0]} size={[0.8, 0.2, 50, 50]} color={'hotpink'}/>
-        <TorusKnot position={[4, 2, 0]} size={[0.5, 0.1, 1000, 50]} color={'red'}/> */}
+        {/* <Torus position={[-4, 0, 0]} size={[0.8, 0.2, 50, 50]} color={'hotpink'}/> */}
+        {/* <TorusKnot position={[4, 2, 0]} size={[0.5, 0.1, 1000, 50]} color={'red'}/> */}
 
         {/* INTERACTIONS */}
-        <Sphere position={[0, 0, 0]} size={[1, 30, 30]} color={'hotpink'}/>
+        {/* <Sphere position={[0, 0, 0]} size={[1, 30, 30]} color={'hotpink'}/> */}
+        <TorusKnot position={[0, 0, 0]} size={[0.8, 0.1, 1000, 50]} color={'red'}/>
+        <OrbitControls enableZoom={false}/>
+        
      </Canvas>
      </div>
   )

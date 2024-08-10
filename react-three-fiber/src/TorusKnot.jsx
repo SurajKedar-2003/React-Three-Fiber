@@ -4,8 +4,8 @@ import { useRef } from "react";
 const TorusKnot =({position, size, color}) => {
     const ref = useRef();
     useFrame((state, delta)=>{
-        ref.current.rotation.x+=delta;
-        ref.current.position.y = Math.sin(state.clock.elapsedTime)*3
+        // ref.current.rotation.x+=delta;
+        // ref.current.position.y = Math.sin(state.clock.elapsedTime)*3
 
     })
     return (
