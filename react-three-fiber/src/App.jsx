@@ -6,6 +6,7 @@ import Sphere from './Sphere'
 import Torus from './Torus'
 import TorusKnot from './TorusKnot'
 import { OrbitControls } from '@react-three/drei'
+import Text3d from './Text3d'
 
 const Cube = ({position, size, color}) =>{
   const ref = useRef();
@@ -32,9 +33,9 @@ function App() {
   
   return (
     <div className='canvas'>
-     <Canvas>
-        <directionalLight position={[0, 0, 2]} />
-        <ambientLight />
+     <Canvas shadows camera={{position:[0,10,20], fov:50}}>
+        {/* <directionalLight />
+        <ambientLight /> */}
         {/* group is used to group them  */}
         {/* <group position={[-3, -1, 0]}>
         <Cube position={[1, 0, 0]} size={[1, 1, 1]} color={'green'} />
@@ -53,7 +54,8 @@ function App() {
 
         {/* INTERACTIONS */}
         {/* <Sphere position={[0, 0, 0]} size={[1, 30, 30]} color={'hotpink'}/> */}
-        <TorusKnot position={[0, 0, 0]} size={[0.8, 0.1, 1000, 50]} color={'red'}/>
+        {/* <TorusKnot position={[0, 0, 0]} size={[0.8, 0.1, 1000, 50]} color={'red'}/> */}
+        <Text3d/>
         <OrbitControls enableZoom={false}/>
         
      </Canvas>
